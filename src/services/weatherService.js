@@ -5,8 +5,6 @@ const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 export const getWeatherByCity = async (city, state = '', country = 'US') => {
   try {
-    console.log('API Key:', API_KEY);
-
     const response = await axios.get(`${BASE_URL}/weather`, {
       params: {
         q: `${city},${state},${country}`,
